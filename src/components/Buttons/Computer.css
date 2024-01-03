@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+/* 
+p {
+    border: 2px solid red;
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    font-family: Lato;
+    font-size: 2em;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+
+    &.fade-in {
+        opacity: 1;
+    }
+} */
+
+svg {
+    position: absolute;
+    font: 20em Lato;
+    letter-spacing: 0.09em;
+    /* width: 100%; */
+    /* height: 100%; */
+    /* margin-top: 5%; */
+    /*   transform: rotate(-90deg); */
+    left: 0;
+}
+
+.container {
+    width: 100%;
+    height: 200px;
+}
+
+svg text {
+    fill: white;
+    stroke: white;
+    fill-opacity: 1;
+    stroke-width: 0;
+    stroke-dasharray: 100% 0;
+    animation: stroke-offset 3s ease-out;
+}
+
+@keyframes stroke-offset {
+    0% {
+        fill-opacity: 0;
+        stroke-width: 0;
+        stroke-dasharray: 0% 100%;
+    }
+
+    25% {
+        stroke-width: 3px;
+    }
+
+    50% {
+        fill-opacity: 0;
+    }
+
+    75% {
+        stroke-width: 3px;
+    }
+
+    100% {
+        stroke-width: 0;
+    }
+}

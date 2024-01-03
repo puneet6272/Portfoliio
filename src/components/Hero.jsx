@@ -1,31 +1,85 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import ButtonHire from "./Buttons/ButtonHire";
+import CVButton from "./Buttons/CVButton";
+
 
 const Hero = () => {
+  const text = "Fullstack  Developer "
+
+  const letterVariants = {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0},
+    exit: { opacity: 0, y: 20 },
+  };
+
+  const textVariants = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1, // Adjust the stagger for the desired effect
+        repeat: Infinity,
+        repeatType: "reverse",
+      },
+    },
+  };
+
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col sm:flex-col items-center md:flex-col lg:flex-row `}
       >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+
+        <div className={`${styles.paddingX} flex flex-row items-center gap-5`}
+        >
+          <div className='flex flex-col justify-center items-center mt-2 '>
+
+
+
+            <div className='w-1 sm:h-30   h-48 violet-gradient relative bottom-2' />
+          </div>
+
+
+
+          <div >
+            <h1 className={`${styles.heroHeadText} text-white mt-4`}>
+              Hi, I'm <span className='text-[#915EFF]'>Puneet</span>
+            </h1>
+            <p className={`${styles.heroSubText} mt-2 mb-2 text-4xl text-white-100 `}>
+              <motion.div
+                variants={textVariants}
+                initial="initial"
+                animate="animate"
+              >
+                {text.split("").map((letter, index) => (
+                  <motion.span
+                    key={index}
+                    variants={letterVariants}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </motion.div>
+
+            </p>
+            <p className=" text-[15px]">
+              This is my official Portfolio website to showes all
+              <br /> Details and work experience  in web development
+            </p>
+
+
+            <div className=" w-72 flex justify-between items-center h-20">
+              <ButtonHire />
+              <CVButton />
+            </div>
+          </div>
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Adrian</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
-          </p>
-        </div>
+        <img className="md:w-[400px] xs:block absolutew-[300px] sm:w-[300px] lg:w-[550px]" src="images/hero.png" alt="" />
+
       </div>
 
-      <ComputersCanvas />
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

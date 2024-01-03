@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      } w-full flex items-center py-2 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -42,10 +43,11 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <img src="images/newLogo.svg" alt='logo' className='rounded-full w-14 h-14 object-contain' />
+          {/* <h1 className=" border-4 border-white w-14 h-14 rounded-full flex justify-center items-center font-bold text-lg">P</h1> */}
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Adrian &nbsp;
-            <span className='sm:block hidden'> | JavaScript Mastery</span>
+            &nbsp;
+            <span className='sm:block hidden'><div className=" text-purple-500 inline">|</div> Portfolio</span>
           </p>
         </Link>
 

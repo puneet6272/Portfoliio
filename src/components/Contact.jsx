@@ -6,8 +6,14 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import Computer from "./Buttons/Computer";
 
 const Contact = () => {
+
+  const serviceId  ="service_czwd3cr"
+  const templateId  ="template_t81mlbx"
+  const publicKey  ="hpA2X3ItL9IfKJiy6"
+  
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -32,17 +38,15 @@ const Contact = () => {
     setLoading(true);
 
     emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      .send(serviceId,templateId,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Puneet",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "koliarun323@gmail.com",
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        publicKey
       )
       .then(
         () => {
@@ -125,9 +129,9 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className='flex items-center xl:flex-1 xl:h-auto md:h-[600px] h-[400px]'
       >
-        <EarthCanvas />
+        <Computer/>
       </motion.div>
     </div>
   );
