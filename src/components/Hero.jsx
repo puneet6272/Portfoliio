@@ -6,7 +6,7 @@ import CVButton from "./Buttons/CVButton";
 
 
 const Hero = () => {
-  const text = "Fullstack  Developer "
+
 
   const letterVariants = {
     initial: { opacity: 0, y: -20 },
@@ -28,10 +28,10 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col sm:flex-col items-center md:flex-col lg:flex-row `}
+        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center sm:flex-col items-center md:flex-col lg:flex-row `}
       >
 
-        <div className={`${styles.paddingX} flex flex-row items-center gap-5`}
+        <div className={`${styles.paddingX} flex flex-row items-center gap-5 `}
         >
           <div className='flex flex-col justify-center items-center mt-2 '>
 
@@ -52,7 +52,7 @@ const Hero = () => {
                 initial="initial"
                 animate="animate"
               >
-                {text.split("").map((letter, index) => (
+                {"Fullstack  Developer".split("").map((letter, index) => (
                   <motion.span
                     key={index}
                     variants={letterVariants}
@@ -64,7 +64,7 @@ const Hero = () => {
 
             </p>
             <p className=" text-[15px]">
-              This is my official Portfolio website to showes all
+              This is my official Portfolio website to show all
               <br /> Details and work experience  in web development
             </p>
 
@@ -76,7 +76,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <img className="md:w-[400px] xs:block absolutew-[300px] sm:w-[300px] lg:w-[550px]" src="images/hero.png" alt="" />
+        {/* <img className="md:w-[400px] xs:block absolutew-[300px] sm:w-[300px] lg:w-[550px]" src="images/hero.png" alt="" /> */}
 
       </div>
 

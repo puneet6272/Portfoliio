@@ -3,16 +3,16 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import Computer from "./Buttons/Computer";
+import RunningText from "./Buttons/RunningText";
 
 const Contact = () => {
 
   const serviceId  ="service_czwd3cr"
   const templateId  ="template_t81mlbx"
-  const publicKey  ="hpA2X3ItL9IfKJiy6"
+  const publicKey  ="YdnHtKG_W7VWiHKUd"
   
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -43,7 +43,6 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Puneet",
           from_email: form.email,
-          to_email: "koliarun323@gmail.com",
           message: form.message,
         },
         publicKey
@@ -131,7 +130,7 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className='flex items-center xl:flex-1 xl:h-auto md:h-[600px] h-[400px]'
       >
-        <Computer/>
+        <RunningText/>
       </motion.div>
     </div>
   );

@@ -29,8 +29,23 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import  Gym from "./Gym.png"
+import  Portfolio from "./Portfolio.png"
+import Bootstrap from "./tech/Bootstrap.png"
+import Mui from "./tech/MUI.png"
+import Socketio from "./tech/Socket.png"
+import TypeScripts from "./tech/TypeScript copy.png"
+import Express from "./tech/Express.png"
+
 
 export {
+  Express,
+  TypeScripts,
+  Socketio,
+  Mui,
+  Bootstrap,
+  Portfolio,
+  Gym,
   logo,
   backend,
   creator,

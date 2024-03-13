@@ -3,11 +3,11 @@ import './CVButton.css'
 
 function CVButton() {
     return (
-        <a href="ARRIVAL LEO GANG BOX PRICE LIST new.pdf" download={`ARRIVAL LEO GANG BOX PRICE LIST new.pdf`}>
-            <div className="button" data-tooltip="Size: 20Mb">
+        <a href="images/Professional CV Resume.pdf" download="imagesProfessional CV Resume.pdf">
+            <div className="button" data-tooltip="Size: 315 kb">
                 <div className="button-wrapper">
                     <div className="text">Download CV</div>
-                    <span className="icon">
+                    <span className='icon'>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true"
