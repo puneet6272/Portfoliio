@@ -77,7 +77,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <img className="md:w-[300px] xs:block absolutew-[300px] sm:w-[200px] lg:w-[350px] border rounded-lg shadow-lg shadow-gray-700" src={MyPhoto} alt="" />
+        <img className="md:w-[300px] xs:block absolutew-[300px] sm:w-[200px] lg:w-[350px] border rounded-full shadow-lg shadow-gray-700" src={MyPhoto} alt="" />
 
       </div>
 
