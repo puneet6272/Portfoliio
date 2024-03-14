@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ButtonHire from "./Buttons/ButtonHire";
 import CVButton from "./Buttons/CVButton";
+import MyPhoto from "../assets/tech/MyPhotos.jpg"
 
 
 const Hero = () => {
@@ -28,7 +29,7 @@ const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-col justify-center sm:flex-col items-center md:flex-col lg:flex-row `}
+        className={`absolute inset-0 top-[120px]  max-w-6xl mx-auto ${styles.paddingX} flex flex-col justify-around sm:flex-col items-center md:flex-col lg:flex-row`}
       >
 
         <div className={`${styles.paddingX} flex flex-row items-center gap-5 `}
@@ -76,7 +77,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* <img className="md:w-[400px] xs:block absolutew-[300px] sm:w-[300px] lg:w-[550px]" src="images/hero.png" alt="" /> */}
+        <img className="md:w-[300px] xs:block absolutew-[300px] sm:w-[200px] lg:w-[350px] border rounded-lg shadow-lg shadow-gray-700" src={MyPhoto} alt="" />
 
       </div>
 
